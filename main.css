@@ -1,0 +1,30 @@
+body{margin-top:20px;}
+.mt-20{margin-top:20px;}
+.add-patient__form {
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    background-color: #d3d3d3;
+}
+.hide_div{display:none;}
+.show_div{display:block;}
+.error{color:red;}
+.error-message__display {
+	padding: 15px;
+    color: red;
+    border: 1px solid #ffe1e1;
+    border-radius: 3px;
+    background-color: #ffe1e1;
+}
+.success-message__display {
+	padding: 15px;
+    color: green;
+    border: 1px solid #c0e7c0;
+    border-radius: 3px;
+    background-color: #c0e7c0;
+}
+.box-button {
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 3px;
+    cursor: pointer;
+}

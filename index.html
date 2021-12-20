@@ -1,0 +1,123 @@
+<html>
+   <head>		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link href="main.css" rel="stylesheet"/>
+		
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  		<script src="main.js"></script>
+  		
+  		
+   </head>
+   <body>
+     <div class="container">
+     	<div class="row">
+     		<div class="col-md-offset-10 col-md-2">
+     			<button type="button" class="btn btn-success btn-block add-patient__button" onclick="onAddPatientButtonClick()">Add Patient</button>
+     		</div>
+     	</div>
+     	<div class="row">
+     		<div class="col-md-12 toast__message mt-20 hide_div"></div>
+     	</div>
+     	<div class="row mt-20 add-patient__form hide_div">
+     		<form id="patient-form__main">
+     			<input type="hidden" value="0" id="patient_id"/>
+     			<div class="col-md-3 mt-20">
+     				<div class="form-group">
+				      <label for="name">Name:<span class="error"> *</span></label>
+				      <input type="text" class="form-control" id="name">
+				    </div>
+				     <div class="form-group">
+				      <label for="city">City:<span class="error"> *</span></label>
+				      <input type="text" class="form-control" id="city">
+				    </div>
+     			</div>
+     			<div class="col-md-3 mt-20">
+     				 <div class="form-group">
+				      <label for="age">Age:<span class="error"> *</span></label>
+				      <input type="number" class="form-control" id="age" min="0">
+				    </div>	
+				    <div class="form-group">
+				      <label for="state">State:<span class="error"> *</span></label>
+				      <select class="form-control" id="state">
+				      	<option value="">Select State</option>
+				      	<option value="Maharashtra">Maharashtra</option>
+				      	<option value="Kerala">Kerala</option>
+				      	<option value="Delhi">Delhi</option>
+				      </select>
+				    </div>	
+     			</div>
+     			<div class="col-md-3 mt-20">
+     				 <div class="form-group">
+				      <label for="dob">DOB:<span class="error"> *</span></label>
+				      <input type="text" class="form-control" id="dob" autocomplete="off">
+				    </div>	
+				     <div class="form-group">
+				      <label for="country">Country:<span class="error"> *</span></label>
+				       <select class="form-control" id="country">
+				      	<option value="">Select Country</option>
+				      	<option value="India">India</option>
+				      	<option value="Japan">Japan</option>
+				      	<option value="US">United States</option>
+				      </select>
+				    </div>
+     			</div>
+	     		<div class="col-md-3 mt-20">
+				    <div class="form-group">
+				      <label for="blood_group">Blood Group:<span class="error"> *</span></label>
+				     <select class="form-control" id="blood_group">
+				      	<option value="">Select Blood Group</option>
+				      	<option value="A+">A+</option>
+				      	<option value="B+">B+</option>
+				      	<option value="O+">O+</option>
+				      	<option value="O-">O-</option>
+				      </select>
+				    </div> 
+	     		</div>
+	     		<div class="col-md-3 mt-20">
+	     			<div class="row">
+	     				<div class="col-md-6">
+			     			<div class="form-group">
+			     				<label for="blood_group"></label>
+			     				<button type="button" class="btn btn-warning btn-block" onclick="cancelForm();">Cancel</button>
+			     			</div>
+		     			</div>
+		     			<div class="col-md-6">
+			     			<div class="form-group">
+			     				<label for="blood_group"></label>
+			     				<button type="button" class="btn btn-success btn-block" onclick="savePatient();">Save</button>
+			     			</div>
+		     			</div>
+	     			</div>
+	     		</div>
+     		</form>
+     	</div>
+     	
+     	<div class="row patient__list mt-20">
+     		<div class="col-sm-12 mt-20">
+     			<div class="table-responsive">          
+				  <table class="table table-striped table-bordered">
+				    <thead>
+				      <tr>
+				        <th>#</th>
+				        <th>Name</th>
+				        <th>Age</th>
+				        <th>City</th>
+				        <th>State</th>
+				        <th>Country</th>
+				        <th>DOB</th>
+				        <th>Blood Group</th>
+				        <th>Action</th>
+				      </tr>
+				    </thead>
+				    <tbody></tbody>
+				  </table>
+				 </div>
+     		</div>	
+     	</div>
+     </div>
+   </body>
+</html>
